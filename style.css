@@ -1,0 +1,120 @@
+/*!
+ * Report on XHTML+MathML v0.1
+ *
+ * Copyright 2012 Taishi Enokiya
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+
+
+
+@charset "UTF-8";
+
+body {
+  margin: 0 auto;
+  width: 800px;
+  counter-reset: counter-h2 counter-h3;
+}
+
+
+/*タイトル*/
+/*===============================*/
+h1,h2,h3,h4,h5,h6{
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", "MS PGothic", Arial, Helvetica, sans-serif;
+  page-break-after: avoid;/*改行禁止できない*/
+}
+
+
+
+h1{/*タイトル*/
+  margin: 20px auto;
+  font-size: 2em;
+  text-align: center;
+  page-break-after: always;
+}
+
+h2{/*章番号*/
+  padding: 30px 0 30px;
+  font-size: 1.6em;
+  counter-increment : counter-h2 ;
+  counter-reset : counter-h3 ;
+}
+
+h3{/*セクション番号*/
+  padding: 40px 10px 20px;
+  font-size: 1.3em;
+  counter-increment: counter-h3 ;
+  counter-reset : counter-h4 ;
+}
+
+
+h4{/*小セクション番号*/
+  padding: 30px 20px 30px;
+  font-size: 1.15em;
+  counter-increment: counter-h4 ;
+}
+
+h2:before {;
+  content :counter(counter-h2) ". " ;
+}
+
+h3:before {
+  content:counters(counter-h2, ".")  "." counter(counter-h3) ". ";
+}
+
+h4:before {
+  content:counters(counter-h2, ".")  "." counter(counter-h3) "."  counter(counter-h4) ". ";
+}
+
+.nocnt{
+  counter-increment: none;
+}
+
+p, div.image, ul, ol{
+  page-break-inside: avoid;/*印刷指定*/
+}
+/*===============================*/
+
+
+/*セクション*/
+/*===============================*/
+section{
+  padding-bottom: 30px;
+}
+/*===============================*/
+
+
+/*文章*/
+/*===============================*/
+p, li{
+  font-family:"ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", sans-serif;
+  padding-left: 30px;
+}
+
+li{
+  list-style: none;
+}
+
+ul li:before{
+  content: ">";
+}
+/*===============================*/
+
+
+/*画像*/
+/*===============================*/
+div.image{
+  display: inline-block;/*センタリングができない*/
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+div.image > img{
+  margin: 0 auto 10px;
+  display: block;/*暫定2個以上の場合*/
+  text-align: center;
+}
+/*===============================*/

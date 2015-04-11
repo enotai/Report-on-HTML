@@ -1,0 +1,272 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/TR/MathML2/dtd/xhtml-math11-f.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="jp" lang="jp">
+	<head>
+		<meta charset="UTF-8" />
+		<title>レポートタイトル</title>
+		<!--<link href="normalize.css" rel="stylesheet" type="text/css" />-->
+		<link href="./reset.css" rel="stylesheet" type="text/css" />
+		<link href="./style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h1 id="title">『過渡現象の測定と波形表示』</h1>
+
+		<section id="mokuteki">
+			<h2>目的</h2>
+			<p>過渡状態における抵抗(R)、コイル(L)、コンデンサ(C)の各素子の動作状態に関する理解を深める。</p>
+		</section>
+
+		<section id="mokuhyo">
+			<h2>達成目標</h2>
+			<ol>
+				<li>1) 基本的な過渡現象の理論式を求め、時定数について計算値と測定の比較ができる。</li>
+				<li>2) オシロスコープを使って過渡現象を観測し、波形データを適切に表現できる。</li>
+			</ol>
+		</section>
+
+
+		<section id="genri">
+			<h2>原理の概要</h2>
+			<p>過渡現象の基本原理は、電気回路Ⅲで学習するが、以下の記載事項を中心iこ教科書等を使って原理をよ
+				り詳しく記述する</p>
+
+			<h3>定常状態と渦渡状熊</h3>
+			<p>定常状態：回路が一定条件下に十分長時間置かれた場合の、回路内の電圧や電流の状態のこと。
+				過渡状態：回路内の条件が急変した場合、ある定常状態から別の定常状態に移行するのに時間を要する
+				ことがある。この変化の過程中を過渡状態と呼ぶ。</p>
+
+			<h3>微分方程式を用いた解法</h3>
+			<p>抵抗:R、キャパシタンスC、インダクタンスL、の電圧v(t) •電流I(t)には、図1に示す関係がある。
+				これらの関係を用いて回路方程式をたて、微分方程式を解くことで、定常状態や過渡状態を数式的に
+				導くことができる。計算途中に出てくる、初期条件、定常解、過渡解、また特にRL、RC回路におい
+				ての時定数、RLC回路においての不足制動、臨界制動、過制動のキーワードを理解しておく。</p>
+		</section>
+
+		<section id="kizai">
+			<h2>必要な実験機材</h2>
+			<ul>
+				<li>オシロスコープ（ディジタルオシロスコープ）</li>
+				<li>発振器（フアンクシヨンジェネレータ）</li>
+				<li>R、L、Cの各素子</li>
+				<p>その他、状況により使用可能</p>
+			</ul>
+
+			<p>素子値の読み方</p>
+			<ul>
+				<li>R : 5色のカラーコード第1，2.3数字と乗数と茶色（誤差1%以内）単位はQ</li>
+				<li>L : 3つの数字で第1• 2数字と乗数単位は例：473 — 47X103 (只H) — 47 (mH)</li>
+				<li>C : 3つの数字で第1• 2数字と乗数単位はpF例：104 —10X104 (PF) — 0.1(pF)</li>
+			</ul>
+		</section>
+
+		<section id="jikken">
+			<h2>実驥内容</h2>
+
+			<h3>1)RL回路</h3>
+			<p>図2(a)のRL回路で、適当なR、Lを選択し、Viと只の波形を観
+				測し、波形を記録する。表示波形から、時定数を求める。</p>
+
+			<h3>2) RC回路</h3>
+			<p>図2(b)のRC回路で、適当なR、Cを選択し、朽と朽の波形を観
+				測し、波形を記録する。表示波形から、時定数を求める。</p>
+
+			<h3>3) RLC回路</h3>
+			<p>図2(c)の;RLC回路で、適当なL、Cを選択し、不足制動、臨界
+				制動、過制動となる抵抗をそれぞれ計算して用意する。朽と妗
+				の波形を観測し、波形を記録する。不足制動における振動の周期
+				を求める。</p>
+
+			<h3>a)	入力波形Piについて</h3>
+			<p>入力に単発波形を入力すると測定が難しくなるため、入力波形Wに方形波を用いて操り返し波形と
+				する。この場合、過渡現象を確実に観測するため、方形波の周期を十分に長くする必要がある。0V
+				と適当な鼋iE設定の.ために、オフセット調整と振幅調整が必要となる。</p>
+
+			<h3>b)	素子値について</h3>
+			<p>RL回路とRC回路については、方形波の周期と時定数の組み合わせを変化させて得られる操り返し
+				波形を観測すると良い。</p>
+
+			<h3>c)	その他</h3>
+			<p>余裕があれば指定箇所以外も観測してみる。</p>
+
+			<div class="image">
+				<img src="../images/texture/xv.png" />
+				図1 テクスチャ
+			</div>
+			<div class="image">
+				<img src="../images/texture/xv.png" />
+				図1 テクスチャ
+			</div>
+
+			<math display='block' xmlns='http://www.w3.org/1998/Math/MathML'>
+				<mtable columnalign='left'>
+					<mtr>
+						<mtd>
+							<msup>
+								<mi>L</mi>
+								<mn>2</mn>
+							</msup>
+							<mi>R</mi><mo stretchy='false'>(</mo><mi>r</mi><mo stretchy='false'>)</mo><msubsup>
+							<mi>Y</mi>
+							<mi>l</mi>
+							<mi>m</mi>
+						</msubsup>
+							<mrow><mo>(</mo>
+								<mrow>
+									<mi>&theta;</mi><mo>,</mo><mi>&phi;</mi>
+								</mrow>
+								<mo>)</mo></mrow>
+						</mtd>
+					</mtr>
+					<mtr>
+						<mtd>
+							<mo>=</mo><mo>&minus;</mo><msup>
+							<mi>&plankv;</mi>
+							<mn>2</mn>
+						</msup>
+							<mrow><mo>[</mo> <mrow>
+								<mfrac>
+									<mn>1</mn>
+									<mrow>
+										<mo>sin</mo><mi>&theta;</mi>
+									</mrow>
+								</mfrac>
+								<mfrac>
+									<mo>&part;</mo>
+									<mrow>
+										<mo>&part;</mo><mi>&theta;</mi>
+									</mrow>
+								</mfrac>
+								<mo>sin</mo><mi>&theta;</mi><mfrac>
+								<mo>&part;</mo>
+								<mrow>
+									<mo>&part;</mo><mi>&theta;</mi>
+								</mrow>
+							</mfrac>
+								<mo>+</mo><mfrac>
+								<mn>1</mn>
+								<mrow>
+									<msup>
+										<mrow>
+											<mo>sin</mo>
+										</mrow>
+										<mn>2</mn>
+									</msup>
+									<mi>&theta;</mi>
+								</mrow>
+							</mfrac>
+								<mfrac>
+									<mrow>
+										<msup>
+											<mo>&part;</mo>
+											<mn>2</mn>
+										</msup>
+
+									</mrow>
+									<mrow>
+										<mo>&part;</mo><msup>
+										<mi>&phi;</mi>
+										<mn>2</mn>
+									</msup>
+
+									</mrow>
+								</mfrac>
+
+							</mrow> <mo>]</mo></mrow><mi>R</mi><mo stretchy='false'>(</mo><mi>r</mi><mo stretchy='false'>)</mo><msubsup>
+							<mi>Y</mi>
+							<mi>l</mi>
+							<mi>m</mi>
+						</msubsup>
+							<mrow><mo>(</mo>
+								<mrow>
+									<mi>&theta;</mi><mo>,</mo><mi>&phi;</mi>
+								</mrow>
+								<mo>)</mo></mrow>
+						</mtd>
+					</mtr>
+					<mtr>
+						<mtd>
+							<mo>=</mo><mo>&minus;</mo><msup>
+							<mi>&plankv;</mi>
+							<mn>2</mn>
+						</msup>
+							<mi>R</mi><mo stretchy='false'>(</mo><mi>r</mi><mo stretchy='false'>)</mo><mrow><mo>[</mo> <mrow>
+							<mfrac>
+								<mn>1</mn>
+								<mrow>
+									<mo>sin</mo><mi>&theta;</mi>
+								</mrow>
+							</mfrac>
+							<mfrac>
+								<mo>&part;</mo>
+								<mrow>
+									<mo>&part;</mo><mi>&theta;</mi>
+								</mrow>
+							</mfrac>
+							<mo>sin</mo><mi>&theta;</mi><mfrac>
+							<mo>&part;</mo>
+							<mrow>
+								<mo>&part;</mo><mi>&theta;</mi>
+							</mrow>
+						</mfrac>
+							<mo>+</mo><mfrac>
+							<mn>1</mn>
+							<mrow>
+								<msup>
+									<mrow>
+										<mo>sin</mo>
+									</mrow>
+									<mn>2</mn>
+								</msup>
+								<mi>&theta;</mi>
+							</mrow>
+						</mfrac>
+							<mfrac>
+								<mrow>
+									<msup>
+										<mo>&part;</mo>
+										<mn>2</mn>
+									</msup>
+
+								</mrow>
+								<mrow>
+									<mo>&part;</mo><msup>
+									<mi>&phi;</mi>
+									<mn>2</mn>
+								</msup>
+
+								</mrow>
+							</mfrac>
+
+						</mrow> <mo>]</mo></mrow><msubsup>
+							<mi>Y</mi>
+							<mi>l</mi>
+							<mi>m</mi>
+						</msubsup>
+							<mrow><mo>(</mo>
+								<mrow>
+									<mi>&theta;</mi><mo>,</mo><mi>&phi;</mi>
+								</mrow>
+								<mo>)</mo></mrow>
+						</mtd>
+					</mtr>
+				</mtable>
+
+			</math>
+
+		</section>
+
+		<section id="kousatsu">
+			<h2>考察踝题</h2>
+			<ol>
+				<li>1)	RL回路とRC回路の理論式を導き、実験で使つた素子値を代入して時定数と波形を示す。</li>
+				<li>2)	RL回路の波形.時定数などについて1)の理論値と実験結果の比較検討を行う。</li>
+				<li>3)	RC回路の波形時定数などについて1)の理論値と実験結果の比較検討を行う。</li>
+				<li>4)	RLC回路について、波形などを理論式と実験結果で比較検討する。</li>
+			</ol>
+		</section>
+
+	</body>
+</html>
+
+
+
